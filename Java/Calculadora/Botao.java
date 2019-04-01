@@ -22,10 +22,10 @@ public class Botao extends JButton
 		this.addActionListener(new ActionListener() 
 		{	@Override public void actionPerformed(ActionEvent arg0) 
 			{	if(cf.getVisor().getText().equals("0"))
-				{	if(isNumber(valor)||valor.equals("."))
+				{	if(isNumber(valor))
 					{cf.getVisor().setText(valor);}
 				}
-			
+				
 				else if(!valor.equals("="))
 				{cf.getVisor().setText(cf.getVisor().getText() + valor);}
 			
