@@ -3,7 +3,6 @@ package Calculadora;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -12,7 +11,7 @@ public class CalculatorFrame extends JFrame
 {	private String simbolos;
 	private Visor visor;
 	private Botao[] btn = new Botao[16]; 
-	public CalculatorFrame()
+	public CalculatorFrame()									
 	{	this.setSize(406, 580);									//tamanho
 		this.setLayout(null);									//nenhum layout
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	//permite fechar a janela
@@ -21,8 +20,7 @@ public class CalculatorFrame extends JFrame
 		this.setTitle("Calculator");							//titulo
 		this.simbolos = "1470258.369=+-*/";						//simbolos dos botoes
 		this.visor = new Visor();								//tela de visão
-		this.visor.setSize(398, 50);
-		this.visor.setLocation(10, 20);
+		this.visor.setLocation(1, 10);
 		this.add(this.visor);
 		this.Init();
 		this.setVisible(true);

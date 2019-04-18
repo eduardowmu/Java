@@ -1,5 +1,6 @@
 package Calculadora;
 
+import java.awt.Color;
 import java.awt.Font;
 import java.awt.List;
 import java.awt.event.ActionEvent;
@@ -18,8 +19,9 @@ public class Botao extends JButton
 		this.setText(this.valor);
 		this.setFont(new Font("Arial", 255, 30));
 		this.setSize(100, 100);
+		this.setBackground(Color.WHITE);
 		this.setEnabled(true);
-		this.addActionListener(new ActionListener() 
+		this.addActionListener(new ActionListener()
 		{	@Override public void actionPerformed(ActionEvent arg0) 
 			{	if(cf.getVisor().getText().equals("0"))
 				{	if(isNumber(valor)||valor.equals("."))
