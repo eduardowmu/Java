@@ -57,10 +57,24 @@ public class Bloco extends JLabel
 					}
 					
 					if(i == 10)
-					{	if(a < 10)
-						{JOptionPane.showMessageDialog(null, "Você pegou " + a + " de " + i);}
+					{	int op = 0;
+						Object[] options = {"Sim", "Não"};
+						if(a < 10)
+						{op = JOptionPane.showOptionDialog(null, 
+							"Você pegou " + a + " de " + i + ". Desejas reiniciar?", "", 
+							JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, 
+							null, options, options[0]);
+						}
 					
-						else JOptionPane.showMessageDialog(null, "Parabéns! Você pegou tudo!");
+						else op = JOptionPane.showOptionDialog(null, 
+							"Parabéns! Você pegou tudo! Desejas reiniciar?", "", 
+							JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, 
+							null, options, options[0]);
+						
+						if(op == JOptionPane.YES_OPTION)
+						{	try {new GameGetBloque().start();} 
+							catch (InterruptedException e) {}
+						}
 						//cenario.restart.setVisible(true);
 						break;
 					}

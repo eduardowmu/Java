@@ -19,14 +19,6 @@ public class Cenario extends JFrame
 		setLocationRelativeTo(null);
 		setResizable(false);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		restart = new JButton("Reiniciar");
-		restart.setLocation(400, 350);
-		restart.setVisible(false);
-		restart.addActionListener(new ActionListener()
-		{	@Override public void actionPerformed(ActionEvent arg0) 
-			{init();}
-		});
-		this.add(restart);
 		init();
 		setVisible(true);
 	}
